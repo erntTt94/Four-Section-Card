@@ -1,0 +1,142 @@
+body {
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+#container {
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        ". box-one ."
+        "box-two box-one box-four"
+        "box-two box-three box-four"
+        ". box-three .";
+    height: 70vh;
+    width: 86%;
+    gap: 20px;
+}
+
+#box-one {
+    border-top-color: hsl(0, 78%, 62%);
+    grid-area: box-one;
+}
+
+#box-two {
+    border-top-color: hsl(180, 62%, 55%);
+    grid-area: box-two;
+}
+
+#box-three {
+    border-top-color: hsl(34, 97%, 64%);
+    grid-area: box-three;
+}
+
+#box-four {
+    border-top-color: hsl(212, 86%, 64%);
+    grid-area: box-four;
+}
+
+
+#title {
+    font-weight: 200;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+#subtitle {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+#productInfo {
+    font-weight: 400;
+    margin-bottom: 4rem;
+    padding: 0 33%;
+    color: hsl(229, 6%, 66%);
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+    color: hsl(234, 12%, 34%);
+}
+
+.container-box {
+    border-radius: 10px;
+    border-top: 6px solid;
+    box-shadow: 0 5px 10px hsl(229, 6%, 66%);
+    position: relative;
+    /* min-width: 280px;
+    min-height: 260px; */
+}
+
+.box-title {
+    color: hsl(234, 12%, 34%);
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.3em;
+}
+
+.box-info {
+    text-align: start;
+    margin-top: 0;
+    margin-left: 2.6em;
+    color: hsl(229, 6%, 66%);
+}
+
+.box-img {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+
+}
+
+@media(max-width: 870px) {
+
+    #container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "box-one box-two"
+            "box-three box-four"
+    }
+
+    #productInfo,
+    #title,
+    #subtitle {
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 500px) {
+    #container {
+        grid-template-columns: 0 minmax(280px, auto) 0;
+        grid-template-rows: repeat(4, minmax(260px, auto));
+        grid-template-areas:
+            ". box-two ."
+            ". box-one ."
+            ". box-three ."
+            ". box-four .";
+    }
+
+    #title,
+    #subtitle {
+        font-size: 1.4em;
+    }
+
+    #productInfo {
+        padding: 0 2em;
+    }
+
+    .box-title {
+        margin-top: 1em;
+    }
+
+}
