@@ -25,7 +25,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/erntTt94/Four-Section-Card](https://github.com/erntTt94/Four-Section-Card)
-- Live Site URL: [https://ernttt94.github.io/Four-Section-Card/](hhttps://ernttt94.github.io/Four-Section-Card/)
+- Live Site URL: [https://ernttt94.github.io/Four-Section-Card](https://ernttt94.github.io/Four-Section-Card/)
 
 ## My process
 
